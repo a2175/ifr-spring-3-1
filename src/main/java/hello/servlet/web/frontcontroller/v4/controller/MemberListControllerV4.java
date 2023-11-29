@@ -2,11 +2,16 @@ package hello.servlet.web.frontcontroller.v4.controller;
 
 import hello.servlet.domain.member.Member;
 import hello.servlet.domain.member.MemberRepository;
+import hello.servlet.web.frontcontroller.MyHandler;
 import hello.servlet.web.frontcontroller.v4.ControllerV4;
+
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Map;
 
+@Component("/front-controller/v5/v4/members")
+@MyHandler
 public class MemberListControllerV4 implements ControllerV4 {
 
     private MemberRepository memberRepository = MemberRepository.getInstance();
